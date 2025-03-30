@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.gradient-background, .skill-section, footer {
+  background: linear-gradient(124deg, #2dcaff, #003647, #37a2d8);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body {
+  font-family: poppins, sans-serif;
+  font-size: 18px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.img-section img {
+  border-radius: 100px;
+  border: 10px solid black;
+
+}
+
+.intro-section {
+  display: flex;
+  border-radius: 20px;
+  justify-content: space-around;
+  height: 60vh;
+  align-items: center;
+  margin-top: 2rem;
+  width: 80vw;
+  padding: 1rem;
+}
+
+.img-section {
+  border: 2px solid black;
+  height: 30rem;
+  width: 30rem;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: white;
+}
+
+.img-section button {
+  padding: 8px;
+  width: 300px;
+  height: 50px;
+  border-radius: 8px;
+  background-color: black;
+  color: white;
+  font-weight: 900;
+  font-size: medium;
+}
+button{
+  cursor: pointer;
+}
+
+.about-section {
+  border: 2px solid black;
+  background-color: white;
+  border-radius: 10px;
+  height: 20rem;
+  width: 30rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+.skill-section {
+  height: 50vh;
+  width: 80vw;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 20px;
+}
+
+/* .skills {
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  width: 40vw;
+  height: auto;
+  } */
+  .skills {
+  border: 1px solid black;
+  width: 15vw; /* Increase width */
+  height: 45vh; /* Allow it to grow */
+  display: flex;
+  flex-wrap: wrap; /* Allows spans to wrap */
+  gap: 10px; /* Adds spacing between spans */
+  padding: 1rem; /* Padding for better spacing */
+  justify-content: center; /* Centering */
+  align-items: center;
+  background-color: white;
+  border-radius: 1rem;
+}
+.skills h2{
+  width: 100%;
+  text-align: center;
+}
+
+.skills span {
+  display: inline-block;
+  padding: 5px;
+  border-radius: 20px;
+  background-color: rgb(218, 218, 218);
+  font-weight: 500;
+  
+}
+.skill-section .project{
+  display: grid;
+  border: 1px solid black;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 1fr 1fr;
+    width: 50%;
+    height: 45vh;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 20px;
+    
+  }
+  .project .project-one{
+    grid-column:1/2;
+    grid-row: 2/3;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px black; 
+  }
+  .project .project-two{
+    grid-column:2/3;
+    grid-row: 2/3;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px black; 
+  }
+  /* .project-one button{
+    width: 6rem;
+  padding: 5px;
+  border-radius: 0.5rem;
+  align-self: center;
+  } */
+.project-two button{
+  background-color: black;
+  color: white;
+  width: 6rem;
+  padding: 5px;
+  border-radius: 0.5rem;
+  align-self: center;
+  margin-top: auto;
+}
+.project-one button{
+  background-color: black;
+  color: white;
+  width: 6rem;
+  padding: 5px;
+  border-radius: 0.5rem;
+  align-self: center;
+  margin-top: auto;
+}
+.project-one a {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-decoration: none;
+  margin-top: auto;
+}
+.project h2{
+  grid-column: span 2;
+
+}
+footer{
+  width: 80vw;
+  padding: 1rem;
+  height: 10vh;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* border: 1px solid black; */
+  box-shadow: 0 0 10px black; /* Only shadow is visible */
+}
+.contact{
+  display: flex;
+  justify-content: center;
+  gap:2rem;
+}
+footer .logo img{
+  border: 3px solid black;
+  border-radius: 3rem;
+}
+button:hover{
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+@media (max-width:480px){
+  .intro-section{
+    flex-direction: column;
+    gap: 5px;
+    height: 70vh;
+    
+  }
+  .img-section{
+    border: 2px solid black;
+    height: 20rem;
+    width: 20rem;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: white;
+  }
+  .about-section {
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 10px;
+    height: 15rem;
+    width: 19rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+  }
+  .img-section img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    border: 5px solid black;
+  
+  }
+  .skill-section {
+    height: 80vh;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 20px;
+  }
+  .skills {
+    border: 1px solid black;
+    min-width: 250px;
+    width: 90%;
+    height:auto; /* Allow it to grow */
+    display: flex;
+    flex-wrap: wrap; /* Allows spans to wrap */
+    gap: 10px; /* Adds spacing between spans */
+    padding:10px; /* Padding for better spacing */
+    justify-content: center; /* Centering */
+    align-items: center;
+    background-color: white;
+    border-radius: 1rem;
+  }
+  .skill-section .project {
+    display: grid;
+    border: 1px solid black;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr 1fr;
+    width: 90%;
+    height: 50vh;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 20px;
+}
+.project .project-two{
+  grid-column: 1/2;
+  grid-row: 3/4;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px black; 
+}
+.skills span {
+  display: inline-block;
+  font-size:small;
+  padding: 5px;
+  border-radius: 20px;
+  background-color: rgb(218, 218, 218);
+  font-weight: 500;
+
+}
+footer{
+  width: 80vw;
+  padding: 1rem;
+  height: 10vh;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* border: 1px solid black; */
+  box-shadow: 0 0 5px black; /* Only shadow is visible */
+}
+.project h2{
+  grid-column:auto;
+
+}
+}
